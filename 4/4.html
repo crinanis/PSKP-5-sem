@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Lab 4</title>
+        <script>
+            function insert()
+            {
+
+                fetch('http://localhost:5000/api/db', { method: 'POST', mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json; charset=utf-8' },
+                    body: JSON.stringify({ id: document.getElementById("ID").value,
+                                           name: document.getElementById("Name").value,
+                                           birth: document.getElementById("BDay").value }) });
+            };
+
+            function select()
+            {
+                fetch('http://localhost:5000/api/db', { method: 'GET', mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json; charset=utf-8' }
+                })
+                    .then(response => { return response.json() })
+                    .then((data) =>
+                    {
+                        document.getElementById("select_result").innerHTML = '';
+                        data.forEach(el => { document.getElementById("select_result").innerHTML += (el.id + '. ' + el.name + ' ' + el.birth + '<br/>'); });
+                    });
+            };
+
+            function update()
+            {
+                fetch('http://localhost:5000/api/db', { method: 'PUT', headers:{'Content-Type': 'application/json'},
+                                                        body: JSON.stringify({ id: document.getElementById("ID").value,
+                                                                               name: document.getElementById("Name").value,
+                                                                               birth: document.getElementById("BDay").value }) });
+            };
+
+            function remove()
+            {
+                fetch('http://localhost:5000/api/db', { method: 'DELETE', body: JSON.stringify({ id: document.getElementById("ID").value,
+                                                                                                 name: document.getElementById("Name").value,
+                                                                                                 birth: document.getElementById("BDay").value }) });
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Lab 4</h1>
+        <div id="select_result"></div>
+
+        <button onclick="select()">Select</button>
+
+        <br />
+        <div content="C" style="padding: 20px">
+            <div class='row'>
+                <label class="col-2">Id</label>
+                <input type="number" class="col-3" id="ID" min="0" />
+            </div>
+            <div class='row'>
+                <label class="col-2">Name</label>
+                <input type="text" class="col-3" id="Name" />
+            </div>
+            <div class='row'>
+                <label class="col-2">Birthday</label>
+                <input type="date" class="col-3" id="BDay" />
+            </div>
+
+            <div class='row'>
+                <button class="col-3" onclick="insert()">Add</button>
+            </div>
+            <div class='row'>
+                <button class="col-3" onclick="update()">Update by Id</button>
+            </div>
+            <div class='row'>
+                <button class="col-3" onclick="remove()">Remove by Id</button>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>02-04</title>
+    </head>
+    <body>
+
+        <input type="button" id = "button" onclick="GetRequest()" value = "Send xmlhttp request">
+        <div id="dynamic">
+        </div>
+
+        <script type='text/javascript'>    
+            function GetRequest()
+            {
+                const request = new XMLHttpRequest();
+                request.open('GET', 'http://localhost:5000/api/name', true);
+    
+                request.onreadystatechange = function()
+                {
+                    if(this.readyState == 4 && request.status == 200)
+                    {
+                        document.getElementById('dynamic').innerHTML += this.responseText;
+                    }
+                }
+                request.send();
+            }
+        </script>
+
+    </body>
+</html>

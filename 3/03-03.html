@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 3</title>
+    </head>
+    <body>
+        <script>
+            let n = 1;
+            const start_time = Date.now();
+            for (var k = 1; k <= 20; k++)
+            {
+                fetch(`http://localhost:5000/fact?k=${k}`,
+                {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json'}
+                })
+                .then(function(response)
+                {
+                    return response.json();
+                })
+                .then(function(data)
+                {
+                    document.body.innerHTML += (n++) + '.Результат: ' + (Date.now()-start_time) + '-' + data.k + '/' + data.fact + '<br/>';
+                });
+            }
+        </script>
+    </body>
+</html>
