@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "server-destroy": "^1.0.1"
+  }
+}
