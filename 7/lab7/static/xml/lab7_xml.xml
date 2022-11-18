@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <student>
+        <name>Ksenya</name>
+        <surname>Budanava</surname>
+        <speciality>POIT</speciality>
+        <course>3</course>
+        <group>5</group>
+    </student>
+</root>
