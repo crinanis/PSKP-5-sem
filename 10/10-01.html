@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>10-01</title>
+        <script>
+            function startWebSocket()
+            {
+                let webSocket = new WebSocket('ws:/localhost:4000/wsserver');
+
+                webSocket.onopen = () =>
+                {
+                    console.log('webSocket: onopen dispatcher');
+                    let n = 1;
+                    let sendingInterval = setInterval(() => { webSocket.send(`10-01-client: ${n++}`);}, 3000);
+
+                    setTimeout(()=>
+                    {
+                        clearInterval(sendingInterval);
+                        webSocket.close();
+                    }, 25000);
+                };
+
+                webSocket.onmessage = (serverResponse) =>
+                {
+                    console.log(`server response: ${serverResponse.data}`);
+                };
+
+                webSocket.onerror = (error) =>
+                {
+                    console.log('webSocket: onerror dispatcher');
+                    console.log(`error: ${error.message}`);
+                    alert(`error: ${error.message}`);
+                };
+
+                webSocket.onclose = () => { console.log('webSocket: onclose dispatcher \n socket was closed'); };
+            }
+        </script>
+    </head>
+    <body>
+        <h1>10-01</h1>
+        <input type="button" value="start WebSocket" onclick="startWebSocket()" >
+    </body>
+</html>
