@@ -1,0 +1,15 @@
+{
+  "name": "Lab12",
+  "version": "1.0.0",
+  "main": "12-01.js",
+  "dependencies": {
+    "ws": "^7.5.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "U0ffer",
+  "license": "ISC",
+  "description": ""
+}
