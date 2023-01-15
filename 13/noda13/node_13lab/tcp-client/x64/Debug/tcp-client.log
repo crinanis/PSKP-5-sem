@@ -1,0 +1,3 @@
+﻿  client.cpp
+E:\1POIT\3\PSKP\noda13\node_13lab\tcp-client\client.cpp(100,6): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  tcp-client.vcxproj -> E:\1POIT\3\PSKP\noda13\node_13lab\x64\Debug\tcp-client.exe

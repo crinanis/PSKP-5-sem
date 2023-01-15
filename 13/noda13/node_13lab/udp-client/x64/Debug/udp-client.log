@@ -1,0 +1,4 @@
+﻿  client.cpp
+E:\1POIT\3\PSKP\13\noda13\node_13lab\udp-client\client.cpp(48,25): warning C4129: d: неизвестная escape-последовательность
+E:\1POIT\3\PSKP\13\noda13\node_13lab\udp-client\client.cpp(53,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  udp-client.vcxproj -> E:\1POIT\3\PSKP\13\noda13\node_13lab\x64\Debug\udp-client.exe

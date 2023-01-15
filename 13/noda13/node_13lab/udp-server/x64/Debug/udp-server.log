@@ -1,0 +1,3 @@
+﻿  server.cpp
+E:\1POIT\3\PSKP\13\noda13\node_13lab\udp-server\server.cpp(58,1): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  udp-server.vcxproj -> E:\1POIT\3\PSKP\13\noda13\node_13lab\x64\Debug\udp-server.exe
