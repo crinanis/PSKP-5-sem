@@ -1,0 +1,3 @@
+mongod -dbpath "C:\Program Files\MongoDB\Server\6.0\data" -logpath "C:\Program Files\MongoDB\Server\6.0\log\mongod.log" -port 27017 -storageEngine=wiredTiger -journal -replSet rs0
+
+mongod -dbpath "C:\db\db" -logpath "C:\db\log\mongod.log" -port 27018 -storageEngine=wiredTiger -journal -replSet rs0
