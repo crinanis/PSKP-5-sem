@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "ffee63ed-dfc2-4d93-bb01-95883e769376",
+		"name": "lab15",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23152312"
+	},
+	"item": [
+		{
+			"name": "api/faculty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/faculty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculty/ИЭ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/faculty/ИЭ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"ИЭ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pulpit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpit/ПИ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pulpit/ПИ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpit",
+						"ПИ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpit?f=ИТ,ИТ1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pulpit?f=ИТ,ИТ1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpit"
+					],
+					"query": [
+						{
+							"key": "f",
+							"value": "ИТ,ИТ1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"faculty\": \"ИЭ\",\r\n\"faculty_name\": \"Инженерно-экономический\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/faculty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"pulpit\":\"ПИ\",\r\n\"pulpit_name\":\"Программной инженерии\",\r\n\"faculty\":\"ИТ\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pulpit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction many",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n\"pulpit\":\"ПИ\",\r\n\"pulpit_name\":\"Программной инженерии\",\r\n\"faculty\":\"ИТ\"\r\n},\r\n{\r\n\"pulpit\":\"ИСИТ\",\r\n\"pulpit_name\":\"Информационных систем и технологий\",\r\n\"faculty\":\"ИТ\"\r\n},\r\n{\r\n\"pulpit\":\"ФИТ\",\r\n\"pulpit_name\":\"Информационных систем и технологий\",\r\n\"faculty\":\"ИТ\"\r\n}\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:3000/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction one",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n\"pulpit\":\"ПИррр\",\r\n\"pulpit_name\":\"Программной инженерии\",\r\n\"faculty\":\"ИТ\"\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculty",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"_id\": {\r\n\"$oid\": \"639333b71d21ce65e64e62eb\"\r\n},\r\n\"faculty\": \"ИЭ\",\r\n\"faculty_name\": \"Инженерно-экономическииий\"\r\n} "
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/faculty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpit",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"63b6be01fdf7181f230699c8\",\r\n    \"pulpit\": \"ПИ\",\r\n    \"pulpit_name\": \"Программной инженерии\",\r\n    \"faculty\": \"ИТ\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pulpit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculty/ИЭ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/faculty/ИЭ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"ИЭ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpit/ПИ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pulpit/ПИ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpit",
+						"ПИ"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
