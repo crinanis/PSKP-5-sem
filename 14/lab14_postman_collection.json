@@ -1,0 +1,530 @@
+{
+	"info": {
+		"_postman_id": "784086aa-c626-49c6-8bbf-20e8ce6f61c0",
+		"name": "lab14",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23152312"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculties",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/faculties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pulpits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/subjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriumtypes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriumtypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriumtypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculty/ИЭФ/pulpits",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/faculty/ИЭФ/pulpits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"ИЭФ",
+						"pulpits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriumtypes/ЛБ-К/auditoriums",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriumtypes/ЛБ-К/auditoriums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriumtypes",
+						"ЛБ-К",
+						"auditoriums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculty",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FACULTY\": \"ИТ\",\r\n    \"FACULTY_NAME\": \"Информационные технологии\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/faculties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PULPIT\": \"ИСиТ      \",\r\n    \"PULPIT_NAME\": \"Иформационный системм и технологий \",\r\n    \"FACULTY\": \"ИТ\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pulpits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/subjects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SUBJECT\": \"БДL        \",\r\n    \"SUBJECT_NAME\": \"Базы данных\",\r\n    \"PULPIT\": \"ИСиТ      \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriumtypes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"AUDITORIUM_TYPE\": \"ЛБ-XХХ      \",\r\n        \"AUDITORIUM_TYPENAME\": \"Химическая лаборатория\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriumtypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriumtypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriums",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"AUDITORIUM\": \"ЛЛ         \",\r\n        \"AUDITORIUM_NAME\": \"ЛЛ\",\r\n        \"AUDITORIUM_CAPACITY\": 90,\r\n        \"AUDITORIUM_TYPE\": \"ЛК        \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculties",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FACULTY\": \"ИДиППП\",\r\n    \"FACULTY_NAME\": \"Издателькое дело и полиграфия апдтейт2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/faculties",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpits",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"PULPIT\": \"ИСиТ      \",\r\n        \"PULPIT_NAME\": \"Иформационный системм и технологий \",\r\n        \"FACULTY\": \"ИДиП      \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pulpits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/subjects",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SUBJECT\": \"БД        \",\r\n    \"SUBJECT_NAME\": \"Базы данных\",\r\n    \"PULPIT\": \"ИСиТ      \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriumtypes",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"AUDITORIUM_TYPE\": \"ЛБ-X      \",\r\n    \"AUDITORIUM_TYPENAME\": \"Химическая лаборатория\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriumtypes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriumtypes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriums",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"AUDITORIUM\": \"103-4     \",\r\n    \"AUDITORIUM_NAME\": \"103-4\",\r\n    \"AUDITORIUM_CAPACITY\": 90,\r\n    \"AUDITORIUM_TYPE\": \"ЛК        \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriums",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/faculties/ИДиПП",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/faculties/ИДиПП",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculties",
+						"ИДиПП"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/pulpits/ИСиИТ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pulpits/ИСиИТ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pulpits",
+						"ИСиИТ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/subjects/БДL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/subjects/БДL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"subjects",
+						"БДL"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriumtypes/ЛБ-XХХx",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriumtypes/ЛБ-XХ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriumtypes",
+						"ЛБ-XХ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/auditoriums/ЛЛR",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auditoriums/ЛЛR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auditoriums",
+						"ЛЛR"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
