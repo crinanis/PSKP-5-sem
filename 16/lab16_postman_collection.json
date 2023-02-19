@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "af5dc8d6-1774-4d14-a65b-7f391fe68ed1",
+		"name": "lab16",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23152312"
+	},
+	"item": [
+		{
+			"name": "getFaculties",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTeachers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"query\": \"query {getTeachers {TEACHER, TEACHER_NAME,PULPIT }}\",\r\n    \"variables\":{}\r\n }"
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPulpits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubjects",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"query\": \"query {getSubjects {SUBJECT, SUBJECT_NAME,PULPIT }}\",\r\n    \"variables\":{}\r\n }"
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFacultyByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query($FACULTY:String){\r\n    getFaculties(FACULTY:$FACULTY){FACULTY, FACULTY_NAME}\r\n}",
+						"variables": "{\"FACULTY\":\"ТОВ\"}"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "setTeacher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation($TEACHER:String!, $TEACHER_NAME:String!, $PULPIT:String!){\r\n    setTeacher(TEACHER:$TEACHER, TEACHER_NAME:$TEACHER_NAME, PULPIT:$PULPIT){\r\n        TEACHER, TEACHER_NAME, PULPIT\r\n    }\r\n}",
+						"variables": "{\r\n    \"TEACHER\": \"БЗБРДВ    \",\r\n    \"TEACHER_NAME\": \"Безбородов Владимир Степановичx\",\r\n    \"PULPIT\": \"ОХ        \"\r\n    }"
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		}
+	]
+}
